@@ -19,7 +19,7 @@ resources:
   - type: compute.v1.instance
     name: vm-2
     properties:
-      zone: europe-central2
+      zone: europe-central2-a
       machineType: https://www.googleapis.com/compute/v1/projects/playground-s-11-a8b72841/zones/europe-central2-a/machineTypes/f1-micro
       disks:
         - deviceName: boot
