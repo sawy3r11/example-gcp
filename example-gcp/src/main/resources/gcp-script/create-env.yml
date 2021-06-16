@@ -1,0 +1,35 @@
+resources:
+  - type: compute.v1.instance
+    name: quickstart-deployment-vm
+    properties:
+      zone: europe-central2
+      machineType: https://www.googleapis.com/compute/v1/projects/playground-s-11-a8b72841/zones/europe-central2/machineTypes/f1-micro
+      disks:
+        - deviceName: boot
+          type: PERSISTENT
+          boot: true
+          autoDelete: true
+          initializeParams:
+            sourceImage: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/family/debian-9
+      networkInterfaces:
+        - network: https://www.googleapis.com/compute/v1/projects/playground-s-11-a8b72841/global/networks/default
+          accessConfigs:
+            - name: External NAT
+              type: ONE_TO_ONE_NAT
+  - type: compute.v2.instance
+    name: quickstart-deployment-vm
+    properties:
+      zone: europe-central2
+      machineType: https://www.googleapis.com/compute/v1/projects/playground-s-11-a8b72841/zones/europe-central2/machineTypes/f1-micro
+      disks:
+        - deviceName: boot
+          type: PERSISTENT
+          boot: true
+          autoDelete: true
+          initializeParams:
+            sourceImage: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/family/debian-9
+      networkInterfaces:
+        - network: https://www.googleapis.com/compute/v1/projects/playground-s-11-a8b72841/global/networks/default
+          accessConfigs:
+            - name: External NAT
+              type: ONE_TO_ONE_NAT
